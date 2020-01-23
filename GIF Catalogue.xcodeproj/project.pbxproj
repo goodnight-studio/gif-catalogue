@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		3CE9B1A123D91D070075CD2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B1A023D91D070075CD2E /* AppDelegate.swift */; };
 		3CE9B1A323D91D070075CD2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B1A223D91D070075CD2E /* SceneDelegate.swift */; };
-		3CE9B1A523D91D070075CD2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B1A423D91D070075CD2E /* ViewController.swift */; };
-		3CE9B1A823D91D070075CD2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE9B1A623D91D070075CD2E /* Main.storyboard */; };
+		3CE9B1A523D91D070075CD2E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B1A423D91D070075CD2E /* RootViewController.swift */; };
 		3CE9B1AB23D91D070075CD2E /* GIF_Catalogue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B1A923D91D070075CD2E /* GIF_Catalogue.xcdatamodeld */; };
 		3CE9B1AD23D91D080075CD2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE9B1AC23D91D080075CD2E /* Assets.xcassets */; };
 		3CE9B1B023D91D080075CD2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE9B1AE23D91D080075CD2E /* LaunchScreen.storyboard */; };
@@ -20,8 +19,7 @@
 		3CE9B19D23D91D070075CD2E /* GIF Catalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GIF Catalogue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE9B1A023D91D070075CD2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CE9B1A223D91D070075CD2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3CE9B1A423D91D070075CD2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3CE9B1A723D91D070075CD2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3CE9B1A423D91D070075CD2E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		3CE9B1AA23D91D070075CD2E /* GIF_Catalogue.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GIF_Catalogue.xcdatamodel; sourceTree = "<group>"; };
 		3CE9B1AC23D91D080075CD2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CE9B1AF23D91D080075CD2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,8 +60,7 @@
 				3CE9B1B723D91D340075CD2E /* GIF Catalogue.entitlements */,
 				3CE9B1A023D91D070075CD2E /* AppDelegate.swift */,
 				3CE9B1A223D91D070075CD2E /* SceneDelegate.swift */,
-				3CE9B1A423D91D070075CD2E /* ViewController.swift */,
-				3CE9B1A623D91D070075CD2E /* Main.storyboard */,
+				3CE9B1A423D91D070075CD2E /* RootViewController.swift */,
 				3CE9B1AC23D91D080075CD2E /* Assets.xcassets */,
 				3CE9B1AE23D91D080075CD2E /* LaunchScreen.storyboard */,
 				3CE9B1B123D91D080075CD2E /* Info.plist */,
@@ -132,7 +129,6 @@
 			files = (
 				3CE9B1B023D91D080075CD2E /* LaunchScreen.storyboard in Resources */,
 				3CE9B1AD23D91D080075CD2E /* Assets.xcassets in Resources */,
-				3CE9B1A823D91D070075CD2E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CE9B1AB23D91D070075CD2E /* GIF_Catalogue.xcdatamodeld in Sources */,
-				3CE9B1A523D91D070075CD2E /* ViewController.swift in Sources */,
+				3CE9B1A523D91D070075CD2E /* RootViewController.swift in Sources */,
 				3CE9B1A123D91D070075CD2E /* AppDelegate.swift in Sources */,
 				3CE9B1A323D91D070075CD2E /* SceneDelegate.swift in Sources */,
 			);
@@ -153,14 +149,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3CE9B1A623D91D070075CD2E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3CE9B1A723D91D070075CD2E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3CE9B1AE23D91D080075CD2E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
