@@ -19,6 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        if let titlebar = windowScene.titlebar {
+            
+            titlebar.titleVisibility = .hidden
+        }
+        
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = RootViewController()
         window?.makeKeyAndVisible()
