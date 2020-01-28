@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C2F67F423DBAF11006F9B42 /* SafariActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F67F323DBAF11006F9B42 /* SafariActivity.swift */; };
 		3C63D94623D932F400F25D64 /* GiphyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C63D94523D932F400F25D64 /* GiphyApi.swift */; };
 		3C63D94823D9357200F25D64 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C63D94723D9357200F25D64 /* Image.swift */; };
 		3CE9B1A123D91D070075CD2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B1A023D91D070075CD2E /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C2F67F323DBAF11006F9B42 /* SafariActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariActivity.swift; sourceTree = "<group>"; };
 		3C63D94523D932F400F25D64 /* GiphyApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyApi.swift; sourceTree = "<group>"; };
 		3C63D94723D9357200F25D64 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		3CE9B19D23D91D070075CD2E /* GIF Catalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GIF Catalogue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C2F67F223DBAF03006F9B42 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				3C2F67F323DBAF11006F9B42 /* SafariActivity.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		3CE9B19423D91D070075CD2E = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 				3CE9B1A223D91D070075CD2E /* SceneDelegate.swift */,
 				3CE9B1C123D924B30075CD2E /* Globals.swift */,
 				3CE9B1C823D9276B0075CD2E /* Data */,
+				3C2F67F223DBAF03006F9B42 /* Misc */,
 				3CE9B1B823D91F890075CD2E /* UI */,
 				3CE9B1AC23D91D080075CD2E /* Assets.xcassets */,
 				3CE9B1AE23D91D080075CD2E /* LaunchScreen.storyboard */,
@@ -227,6 +238,7 @@
 				3C63D94823D9357200F25D64 /* Image.swift in Sources */,
 				3CE9B1CD23D927A40075CD2E /* GIF.swift in Sources */,
 				3CE9B1C723D925EB0075CD2E /* GiphyRequest.swift in Sources */,
+				3C2F67F423DBAF11006F9B42 /* SafariActivity.swift in Sources */,
 				3CE9B1C223D924B30075CD2E /* Globals.swift in Sources */,
 				3CE9B1C023D923030075CD2E /* GIFCollectionViewCell.swift in Sources */,
 				3CE9B1BD23D91FEA0075CD2E /* PopularView.swift in Sources */,

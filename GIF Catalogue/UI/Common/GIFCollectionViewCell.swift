@@ -10,6 +10,14 @@ import UIKit
 
 class GIFCollectionViewCell: UICollectionViewCell {
     
+    var gif: GIF? {
+        didSet {
+            if let url = gif?.image.fixedWidthUrl {
+                setImage(url: url)
+            }
+        }
+    }
+    
     let imageView = UIImageView()
     
     static var identifier: String {
@@ -38,6 +46,18 @@ class GIFCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         imageView.frame = bounds
+    }
+    
+    func setSelected() {
+        backgroundColor = .systemGray5
+        layer.borderColor = UIColor.systemBlue.cgColor
+        layer.borderWidth = 2
+    }
+    
+    func setDeselected() {
+        backgroundColor = .clear
+        layer.borderColor = UIColor.clear.cgColor
+        layer.borderWidth = 0
     }
     
     required init?(coder: NSCoder) {

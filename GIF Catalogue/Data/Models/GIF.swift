@@ -15,7 +15,10 @@ class GIF: NSObject {
 //    let type: String
 //    let id: String
 //    let slug: String
-//    let url: String
+    let urlStr: String
+    var url: URL {
+        return URL(string: urlStr)!
+    }
 //    let bitlyUrl: String
 //    let embedUrl: String
 //    let username: String
@@ -34,16 +37,19 @@ class GIF: NSObject {
     
     init?(data: NSDictionary) {
         guard let title = data["title"] as? String,
-            let imageData = data["images"] as? NSDictionary
+            let imageData = data["images"] as? NSDictionary,
+            let urlStr = data["url"] as? String
             else { return nil }
         
         self.title = title
+        self.urlStr = urlStr
         
         if let image = Image(data: imageData) {
             self.image = image
         } else {
             return nil
         }
+
     }
     
 }
