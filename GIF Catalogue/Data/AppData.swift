@@ -10,7 +10,30 @@ import UIKit
 
 class AppData: NSObject {
     
-    static var trendingGifs: [GIF]?
+    static var trendingGifs: [GIF]? {
+        
+        didSet {
+            preload(gifs: trendingGifs)
+        }
+    }
+    
+    static var searchGifs: [GIF]? {
+        
+        didSet {
+            preload(gifs: searchGifs)
+        }
+    }
+    
+    static func preload(gifs: [GIF]?) {
+        
+        guard let gifs = gifs else { return }
+        
+        for gif in gifs {
+            gif.image.loadFixedWidthData(completion: nil)
+        }
+    }
+    
+    
     static var shared = AppData()
     
     private override init() { }

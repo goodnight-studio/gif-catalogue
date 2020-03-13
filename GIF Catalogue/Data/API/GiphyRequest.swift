@@ -28,6 +28,14 @@ class GiphyRequest: NSObject {
             URLQueryItem(name: "api_key", value: Globals.giphyApiKey)
         ]
         
+        GiphyRequest.make(for: urlComponents, completion: completion, errorHandler: errorHandler)
+        
+    }
+    
+    static func make(for urlComponents: URLComponents,
+                     completion: @escaping CompletionHandler,
+                     errorHandler: @escaping ErrorHandler) {
+        
         let session = URLSession.shared
         session.configuration.allowsCellularAccess = true
         session.configuration.waitsForConnectivity = true
@@ -41,7 +49,7 @@ class GiphyRequest: NSObject {
             
             // if there is an error
             if let error = error {
-                print("Request - dataTask: No data for \(requestURL)!")
+                print("Request - dataTask: No data for \(urlComponents.url!)!")
                 print("Request - dataTask:", error)
                 print("Request - dataTask:", error.localizedDescription)
                 errorHandler(error)
@@ -50,7 +58,7 @@ class GiphyRequest: NSObject {
             
             // make sure there's data
             guard let rawData = data else {
-                print("Request - dataTask: Did not receive data for \(requestURL)")
+                print("Request - dataTask: Did not receive data for \(urlComponents.url!)")
                 errorHandler(nil)
                 return
             }

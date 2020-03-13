@@ -14,6 +14,10 @@ class RootViewController: UINavigationController {
         
         let pVC = PopularViewController()
         super.init(rootViewController: pVC)
+        
+//        #if targetEnvironment(macCatalyst)
+//        navigationBar.isHidden = true
+//        #endif
     }
     
     required init?(coder aDecoder: NSCoder) {

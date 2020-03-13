@@ -22,6 +22,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         #if targetEnvironment(macCatalyst)
         if let titlebar = windowScene.titlebar {
             
+//            let toolbar = NSToolbar(identifier: "toolbar")
+//            
+//            toolbar.delegate = self
+//            toolbar.allowsUserCustomization = false
+//            toolbar.centeredItemIdentifier = NSToolbarItem.Identifier("searchBar")
+//            
+//            titlebar.toolbar = toolbar
+            
             titlebar.titleVisibility = .hidden
         }
         #endif
@@ -64,4 +72,80 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
+
+#if targetEnvironment(macCatalyst)
+extension SceneDelegate: NSToolbarDelegate {
+    
+    func toolbar(_ toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: NSToolbarItem.Identifier, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
+        
+        if itemIdentifier == NSToolbarItem.Identifier("refreshItem") {
+            
+            let refreshBarItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(SceneDelegate.refresh))
+            let refreshItem = NSToolbarItem(itemIdentifier: NSToolbarItem.Identifier(rawValue: "refreshItem"), barButtonItem: refreshBarItem)
+            
+            return refreshItem
+        }
+        
+        if itemIdentifier == NSToolbarItem.Identifier("titleText") {
+            //            let textBarItem = UIBarItem
+            let titleItem = NSToolbarItem(itemIdentifier: NSToolbarItem.Identifier(rawValue: "titleText"))
+            titleItem.title = "GIF Catalogue"
+            
+            return titleItem
+        }
+        
+        if itemIdentifier == NSToolbarItem.Identifier("searchBar") {
+
+            let searchBar = UISearchBar()
+            searchBar.placeholder = "Popular GIFs"
+            //            searchBar.frame.size.width = 200
+            let searchBarItem = UIBarButtonItem(customView: searchBar)
+            let barItem = NSToolbarItem(itemIdentifier: NSToolbarItem.Identifier("searchBar"),  barButtonItem: searchBarItem)
+            return barItem
+        }
+        
+        if itemIdentifier == NSToolbarItem.Identifier("spacer") {
+            
+            let spacerItem = NSToolbarItem(itemIdentifier: NSToolbarItem.Identifier.space)
+            
+            return spacerItem
+        }
+        
+        if itemIdentifier == NSToolbarItem.Identifier("search") {
+            
+            let searchBarItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(SceneDelegate.search))
+            let searchItem = NSToolbarItem(itemIdentifier: NSToolbarItem.Identifier(rawValue: "search"), barButtonItem: searchBarItem)
+            
+            return searchItem
+        }
+        
+        return nil
+    }
+    
+    func toolbarDefaultItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
+        return [
+//            NSToolbarItem.Identifier.space,
+            NSToolbarItem.Identifier.space,
+            NSToolbarItem.Identifier.flexibleSpace,
+            NSToolbarItem.Identifier(rawValue: "titleText"),
+            NSToolbarItem.Identifier.flexibleSpace,
+            NSToolbarItem.Identifier(rawValue: "search"),
+//            NSToolbarItem.Identifier(rawValue: "refreshItem"),
+        ]
+    }
+    
+    func toolbarAllowedItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
+        return self.toolbarDefaultItemIdentifiers(toolbar)
+    }
+    
+    @objc func refresh() {
+//        NotificationCenter.default.post(name: .dataShouldRefresh, object: [])
+    }
+    
+    @objc func search() {
+        print("search")
+        NotificationCenter.default.post(name: NSNotification.Name("com.geofcrowl.gif-catalogue.toggleSearch"), object: [])
+    }
+}
+#endif
 

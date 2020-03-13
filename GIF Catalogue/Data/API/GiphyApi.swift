@@ -26,9 +26,28 @@ class GiphyApi {
             }
 
         }, errorHandler: { (_ error: Error?) in
-            print("error")
+            print("error:", error?.localizedDescription ?? "nil")
         })
 
+    }
+    
+    static func search(query: String, completion: @escaping CompletionHandler, errorHandler: @escaping ErrorHandler) {
+        
+        guard let url = URLs.search(query: query) else { errorHandler(nil); return }
+        
+        GiphyRequest.make(for: url, completion: { (_ data: NSDictionary) in
+            
+            guard let gifs = handleGifData(data: data) else { return errorHandler(nil)}
+            
+            AppData.searchGifs = gifs
+            
+            DispatchQueue.main.async {
+                completion()
+            }
+            
+        }, errorHandler: { (_ error: Error?) in
+            print("error:", error?.localizedDescription ?? "nil")
+        })
     }
     
     static func handleGifData(data: NSDictionary) -> [GIF]? {

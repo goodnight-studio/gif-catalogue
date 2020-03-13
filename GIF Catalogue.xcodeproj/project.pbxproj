@@ -10,6 +10,9 @@
 		3C2F67F423DBAF11006F9B42 /* SafariActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F67F323DBAF11006F9B42 /* SafariActivity.swift */; };
 		3C63D94623D932F400F25D64 /* GiphyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C63D94523D932F400F25D64 /* GiphyApi.swift */; };
 		3C63D94823D9357200F25D64 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C63D94723D9357200F25D64 /* Image.swift */; };
+		3CE4191923EBB4D500DB669D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4191823EBB4D500DB669D /* DetailViewController.swift */; };
+		3CE4191B23EBB4E000DB669D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4191A23EBB4E000DB669D /* DetailView.swift */; };
+		3CE4191E23EBB6C100DB669D /* UIImageView+downloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4191D23EBB6C100DB669D /* UIImageView+downloadImage.swift */; };
 		3CE9B1A123D91D070075CD2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B1A023D91D070075CD2E /* AppDelegate.swift */; };
 		3CE9B1A323D91D070075CD2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B1A223D91D070075CD2E /* SceneDelegate.swift */; };
 		3CE9B1A523D91D070075CD2E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B1A423D91D070075CD2E /* RootViewController.swift */; };
@@ -24,12 +27,16 @@
 		3CE9B1C723D925EB0075CD2E /* GiphyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B1C623D925EB0075CD2E /* GiphyRequest.swift */; };
 		3CE9B1CB23D927990075CD2E /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B1CA23D927990075CD2E /* AppData.swift */; };
 		3CE9B1CD23D927A40075CD2E /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B1CC23D927A40075CD2E /* GIF.swift */; };
+		C87D0E91F93A9E2D693E4061 /* Pods_GIF_Catalogue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4112177AC502A53D9964A5 /* Pods_GIF_Catalogue.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C2F67F323DBAF11006F9B42 /* SafariActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariActivity.swift; sourceTree = "<group>"; };
 		3C63D94523D932F400F25D64 /* GiphyApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyApi.swift; sourceTree = "<group>"; };
 		3C63D94723D9357200F25D64 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		3CE4191823EBB4D500DB669D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3CE4191A23EBB4E000DB669D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		3CE4191D23EBB6C100DB669D /* UIImageView+downloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+downloadImage.swift"; sourceTree = "<group>"; };
 		3CE9B19D23D91D070075CD2E /* GIF Catalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GIF Catalogue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE9B1A023D91D070075CD2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CE9B1A223D91D070075CD2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +54,9 @@
 		3CE9B1C623D925EB0075CD2E /* GiphyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyRequest.swift; sourceTree = "<group>"; };
 		3CE9B1CA23D927990075CD2E /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppData.swift; path = "GIF Catalogue/Data/AppData.swift"; sourceTree = SOURCE_ROOT; };
 		3CE9B1CC23D927A40075CD2E /* GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
+		528427C35011DDB4271292B7 /* Pods-GIF Catalogue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GIF Catalogue.release.xcconfig"; path = "Target Support Files/Pods-GIF Catalogue/Pods-GIF Catalogue.release.xcconfig"; sourceTree = "<group>"; };
+		CBD65037219F2C1D17465147 /* Pods-GIF Catalogue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GIF Catalogue.debug.xcconfig"; path = "Target Support Files/Pods-GIF Catalogue/Pods-GIF Catalogue.debug.xcconfig"; sourceTree = "<group>"; };
+		CC4112177AC502A53D9964A5 /* Pods_GIF_Catalogue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GIF_Catalogue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +64,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C87D0E91F93A9E2D693E4061 /* Pods_GIF_Catalogue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3467CAC9928E788C78F42D7F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CBD65037219F2C1D17465147 /* Pods-GIF Catalogue.debug.xcconfig */,
+				528427C35011DDB4271292B7 /* Pods-GIF Catalogue.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3C2F67F223DBAF03006F9B42 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,11 +89,30 @@
 			path = Misc;
 			sourceTree = "<group>";
 		};
+		3CE4191723EBB4AF00DB669D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				3CE4191823EBB4D500DB669D /* DetailViewController.swift */,
+				3CE4191A23EBB4E000DB669D /* DetailView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		3CE4191C23EBB6AA00DB669D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3CE4191D23EBB6C100DB669D /* UIImageView+downloadImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3CE9B19423D91D070075CD2E = {
 			isa = PBXGroup;
 			children = (
 				3CE9B19F23D91D070075CD2E /* GIF Catalogue */,
 				3CE9B19E23D91D070075CD2E /* Products */,
+				3467CAC9928E788C78F42D7F /* Pods */,
+				92437804E2B38A47C835CF98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +127,7 @@
 		3CE9B19F23D91D070075CD2E /* GIF Catalogue */ = {
 			isa = PBXGroup;
 			children = (
+				3CE4191C23EBB6AA00DB669D /* Extensions */,
 				3CE9B1B723D91D340075CD2E /* GIF Catalogue.entitlements */,
 				3CE9B1A023D91D070075CD2E /* AppDelegate.swift */,
 				3CE9B1A223D91D070075CD2E /* SceneDelegate.swift */,
@@ -108,6 +149,7 @@
 				3CE9B1A423D91D070075CD2E /* RootViewController.swift */,
 				3CE9B1BE23D922EC0075CD2E /* Common */,
 				3CE9B1B923D91FB50075CD2E /* Popular */,
+				3CE4191723EBB4AF00DB669D /* Detail */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -158,6 +200,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		92437804E2B38A47C835CF98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC4112177AC502A53D9964A5 /* Pods_GIF_Catalogue.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,9 +215,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CE9B1B423D91D080075CD2E /* Build configuration list for PBXNativeTarget "GIF Catalogue" */;
 			buildPhases = (
+				45906694F113A5B0A7B12743 /* [CP] Check Pods Manifest.lock */,
 				3CE9B19923D91D070075CD2E /* Sources */,
 				3CE9B19A23D91D070075CD2E /* Frameworks */,
 				3CE9B19B23D91D070075CD2E /* Resources */,
+				7DAB814727D28EE869138CD7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -223,6 +275,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		45906694F113A5B0A7B12743 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GIF Catalogue-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DAB814727D28EE869138CD7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GIF Catalogue/Pods-GIF Catalogue-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GIF Catalogue/Pods-GIF Catalogue-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GIF Catalogue/Pods-GIF Catalogue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3CE9B19923D91D070075CD2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -230,14 +324,17 @@
 			files = (
 				3CE9B1AB23D91D070075CD2E /* GIF_Catalogue.xcdatamodeld in Sources */,
 				3CE9B1C523D925070075CD2E /* URLs.swift in Sources */,
+				3CE4191B23EBB4E000DB669D /* DetailView.swift in Sources */,
 				3CE9B1BB23D91FE00075CD2E /* PopularViewController.swift in Sources */,
 				3C63D94623D932F400F25D64 /* GiphyApi.swift in Sources */,
 				3CE9B1A523D91D070075CD2E /* RootViewController.swift in Sources */,
 				3CE9B1CB23D927990075CD2E /* AppData.swift in Sources */,
 				3CE9B1A123D91D070075CD2E /* AppDelegate.swift in Sources */,
+				3CE4191923EBB4D500DB669D /* DetailViewController.swift in Sources */,
 				3C63D94823D9357200F25D64 /* Image.swift in Sources */,
 				3CE9B1CD23D927A40075CD2E /* GIF.swift in Sources */,
 				3CE9B1C723D925EB0075CD2E /* GiphyRequest.swift in Sources */,
+				3CE4191E23EBB6C100DB669D /* UIImageView+downloadImage.swift in Sources */,
 				3C2F67F423DBAF11006F9B42 /* SafariActivity.swift in Sources */,
 				3CE9B1C223D924B30075CD2E /* Globals.swift in Sources */,
 				3CE9B1C023D923030075CD2E /* GIFCollectionViewCell.swift in Sources */,
@@ -376,6 +473,7 @@
 		};
 		3CE9B1B523D91D080075CD2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBD65037219F2C1D17465147 /* Pods-GIF Catalogue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "GIF Catalogue/GIF Catalogue.entitlements";
@@ -397,6 +495,7 @@
 		};
 		3CE9B1B623D91D080075CD2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 528427C35011DDB4271292B7 /* Pods-GIF Catalogue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "GIF Catalogue/GIF Catalogue.entitlements";
