@@ -7,21 +7,25 @@
 //
 
 import UIKit
+import FLAnimatedImage
 
 class Image: NSObject {
 
     let fixedWidthUrl: URL?
     var fixedWidthData: Data?
+    var fixedWidthImage: UIImage? {
+        return fixedWidthData != nil ? UIImage(data: fixedWidthData!) : nil
+    }
     
     let originalImageUrl: URL?
     var originalImageData: Data?
     
-    var originalImage: UIImage?
+    var originalImage: FLAnimatedImage?
     
     init?(data: NSDictionary) {
         
-        guard let fixedWidth = data["fixed_width"] as? NSDictionary,
-            let original = data["original"] as? NSDictionary
+        guard let fixedWidth = data["fixed_width_downsampled"] as? NSDictionary,
+            let original = data["downsized_large"] as? NSDictionary
             else { return nil }
         
         if let fixedWidthUrlStr = fixedWidth["url"] as? String {
@@ -37,14 +41,15 @@ class Image: NSObject {
         }
         
         super.init()
-        
-        loadOriginalImage()
     }
     
-    func loadOriginalImage() {
+    func loadOriginalImage(completion: ((_ image: FLAnimatedImage) -> Void)? ) {
         if let originalImageData = originalImageData {
             
-            originalImage = UIImage(data: originalImageData)
+//            originalImage = UIImage(data: originalImageData)
+            originalImage = FLAnimatedImage(animatedGIFData: originalImageData)
+            print("done loading original.")
+            completion?(originalImage!)
             
         } else {
             
@@ -52,7 +57,9 @@ class Image: NSObject {
             
             originalImageData = _originalImageData
             
-            originalImage = UIImage(data: _originalImageData)
+            originalImage = FLAnimatedImage(animatedGIFData: originalImageData)
+            print("done loading original.")
+            completion?(originalImage!)
         }
     }
     
