@@ -228,14 +228,40 @@ extension PopularViewController: UICollectionViewDragDelegate {
         
         guard let gif = gifs?[indexPath.row] else { return [] }
         
-        let data = gif.image.originalImageData
-        let identifier: String = gif.image.originalImage!.cgImage?.utType! as! String
+//        let data = gif.image.originalImageData
+        #if targetEnvironment(macCatalyst)
+        let identifier: String = kUTTypeGIF as String
+        #else
+        let identifier: String = gif.image.fixedWidthImage?.cgImage?.utType as! String
+        #endif
         
         let itemProvider = NSItemProvider()
+        let progress = Progress(totalUnitCount: 1)
+//        let itemProvider = NSItemProvider(object: gif.urlStr as NSString)
         
         itemProvider.registerDataRepresentation(forTypeIdentifier: identifier, visibility: .all) { completion in
-            completion(data, nil)
-            return nil
+            print("register")
+            
+            let data = gif.image.originalImageData
+            
+            if data == nil {
+                
+                // I don't understand this
+                completion(data, nil)
+                progress.completedUnitCount = 0
+                return progress
+                
+            } else {
+                
+                completion(data, nil)
+                progress.completedUnitCount = 1
+                return progress
+            }
+        }
+        
+        itemProvider.loadItem(forTypeIdentifier: identifier, options: nil) { (coding, error) in
+            print("loading")
+            gif.image.loadOriginalImage(completion: nil)
         }
         
         let dragItem = UIDragItem(itemProvider: itemProvider)
